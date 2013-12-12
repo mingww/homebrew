@@ -247,7 +247,7 @@ index 84b1b4b..6cc63d2 100644
 + files through HTML forms, use the POST mechanism.
 +
 + \sa get(), post(), deleteResource(), sendCustomRequest()
-+ */
++ /
 +QNetworkReply *QNetworkAccessManager::patch(const QNetworkRequest &request, QIODevice *data)
 +{
 +    return d_func()->postProcess(createRequest(QNetworkAccessManager::PatchOperation, request, data));
