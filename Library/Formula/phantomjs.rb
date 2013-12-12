@@ -41,10 +41,10 @@ index c068234..90d2ca0 100644
  void qt_dispatchTabletProximityEvent(const ::TabletProximityRec &proxRec);
  Qt::KeyboardModifiers qt_cocoaModifiers2QtModifiers(ulong modifierFlags);
  Qt::KeyboardModifiers qt_cocoaDragOperation2QtModifiers(uint dragOperations);
- diff --git src/networkaccessmanager.cpp src/networkaccessmanager.cpp
+ diff --git a/src/networkaccessmanager.cpp b/src/networkaccessmanager.cpp
 index fbe8af1..b04463b 100644
---- src/networkaccessmanager.cpp
-+++ src/networkaccessmanager.cpp
+--- a/src/networkaccessmanager.cpp
++++ b/src/networkaccessmanager.cpp
 @@ -59,6 +59,9 @@ static const char *toString(QNetworkAccessManager::Operation op)
      case QNetworkAccessManager::PostOperation:
          str = "POST";
@@ -55,10 +55,10 @@ index fbe8af1..b04463b 100644
      case QNetworkAccessManager::DeleteOperation:
          str = "DELETE";
          break;
-diff --git src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp
+diff --git a/src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp b/src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp
 index 3cf6439..0921225 100644
---- src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp
-+++ src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp
+--- a/src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp
++++ b/src/qt/src/3rdparty/webkit/Source/WebCore/platform/network/qt/QNetworkReplyHandler.cpp
 @@ -368,6 +368,8 @@ String QNetworkReplyHandler::httpMethod() const
          return "POST";
      case QNetworkAccessManager::PutOperation:
@@ -102,10 +102,10 @@ index 3cf6439..0921225 100644
          case QNetworkAccessManager::HeadOperation:
              return manager->head(m_request);
          case QNetworkAccessManager::PutOperation: {
-diff --git src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp
+diff --git a/src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp b/src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp
 index 04453b6..c517734 100644
---- src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp
-+++ src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp
+--- a/src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp
++++ b/src/qt/src/3rdparty/webkit/Source/WebKit/qt/Api/qwebframe.cpp
 @@ -908,6 +908,9 @@ void QWebFrame::load(const QNetworkRequest &req,
          case QNetworkAccessManager::PostOperation:
              request.setHTTPMethod("POST");
@@ -116,10 +116,10 @@ index 04453b6..c517734 100644
          case QNetworkAccessManager::DeleteOperation:
              request.setHTTPMethod("DELETE");
              break;
-diff --git src/qt/src/network/access/qhttp.cpp src/qt/src/network/access/qhttp.cpp
+diff --git a/src/qt/src/network/access/qhttp.cpp b/src/qt/src/network/access/qhttp.cpp
 index dea23f9..984133d 100644
---- src/qt/src/network/access/qhttp.cpp
-+++ src/qt/src/network/access/qhttp.cpp
+--- a/src/qt/src/network/access/qhttp.cpp
++++ b/src/qt/src/network/access/qhttp.cpp
 @@ -2254,6 +2254,27 @@ int QHttp::post(const QString &path, const QByteArray &data, QIODevice *to)
      return d->addRequest(new QHttpPGHRequest(header, new QByteArray(data), to));
  }
@@ -149,7 +149,7 @@ index dea23f9..984133d 100644
      Sends a header request for \a path to the server set by setHost()
      or as specified in the constructor.
 */
-diff --git src/qt/src/network/access/qhttp.h src/qt/src/network/access/qhttp.h
+diff --git a/src/qt/src/network/access/qhttp.h b/src/qt/src/network/access/qhttp.h
 index 9700e6e..1590806 100644
 --- src/qt/src/network/access/qhttp.h
 +++ src/qt/src/network/access/qhttp.h
@@ -162,10 +162,10 @@ index 9700e6e..1590806 100644
      int head(const QString &path);
      int request(const QHttpRequestHeader &header, QIODevice *device=0, QIODevice *to=0);
      int request(const QHttpRequestHeader &header, const QByteArray &data, QIODevice *to=0);
-diff --git src/qt/src/network/access/qhttpnetworkrequest.cpp src/qt/src/network/access/qhttpnetworkrequest.cpp
+diff --git a/src/qt/src/network/access/qhttpnetworkrequest.cpp b/src/qt/src/network/access/qhttpnetworkrequest.cpp
 index 617541f..78a2d82 100644
---- src/qt/src/network/access/qhttpnetworkrequest.cpp
-+++ src/qt/src/network/access/qhttpnetworkrequest.cpp
+--- a/src/qt/src/network/access/qhttpnetworkrequest.cpp
++++ b/src/qt/src/network/access/qhttpnetworkrequest.cpp
 @@ -90,6 +90,9 @@ QByteArray QHttpNetworkRequestPrivate::methodName() const
      case QHttpNetworkRequest::Post:
          return "POST";
@@ -176,10 +176,10 @@ index 617541f..78a2d82 100644
      case QHttpNetworkRequest::Options:
          return "OPTIONS";
          break;
-diff --git src/qt/src/network/access/qhttpnetworkrequest_p.h src/qt/src/network/access/qhttpnetworkrequest_p.h
+diff --git a/src/qt/src/network/access/qhttpnetworkrequest_p.h b/src/qt/src/network/access/qhttpnetworkrequest_p.h
 index 3b98342..4b6d654 100644
---- src/qt/src/network/access/qhttpnetworkrequest_p.h
-+++ src/qt/src/network/access/qhttpnetworkrequest_p.h
+--- a/src/qt/src/network/access/qhttpnetworkrequest_p.h
++++ b/src/qt/src/network/access/qhttpnetworkrequest_p.h
 @@ -69,6 +69,7 @@ public:
          Get,
          Head,
@@ -188,10 +188,10 @@ index 3b98342..4b6d654 100644
          Put,
          Delete,
          Trace,
-diff --git src/qt/src/network/access/qnetworkaccesshttpbackend.cpp src/qt/src/network/access/qnetworkaccesshttpbackend.cpp
+diff --git a/src/qt/src/network/access/qnetworkaccesshttpbackend.cpp b/src/qt/src/network/access/qnetworkaccesshttpbackend.cpp
 index 1d048ee..ffd6b32 100644
---- src/qt/src/network/access/qnetworkaccesshttpbackend.cpp
-+++ src/qt/src/network/access/qnetworkaccesshttpbackend.cpp
+--- a/src/qt/src/network/access/qnetworkaccesshttpbackend.cpp
++++ b/src/qt/src/network/access/qnetworkaccesshttpbackend.cpp
 @@ -171,6 +171,7 @@ QNetworkAccessHttpBackendFactory::create(QNetworkAccessManager::Operation op,
      switch (op) {
      case QNetworkAccessManager::GetOperation:
@@ -213,10 +213,10 @@ index 1d048ee..ffd6b32 100644
      case QNetworkAccessManager::PutOperation:
          invalidateCache();
          httpRequest.setOperation(QHttpNetworkRequest::Put);
-diff --git src/qt/src/network/access/qnetworkaccessmanager.cpp src/qt/src/network/access/qnetworkaccessmanager.cpp
+diff --git a/src/qt/src/network/access/qnetworkaccessmanager.cpp b/src/qt/src/network/access/qnetworkaccessmanager.cpp
 index 84b1b4b..6cc63d2 100644
---- src/qt/src/network/access/qnetworkaccessmanager.cpp
-+++ src/qt/src/network/access/qnetworkaccessmanager.cpp
+--- a/src/qt/src/network/access/qnetworkaccessmanager.cpp
++++ b/src/qt/src/network/access/qnetworkaccessmanager.cpp
 @@ -715,6 +715,56 @@ QNetworkReply *QNetworkAccessManager::put(const QNetworkRequest &request, const
      return reply;
  }
@@ -274,10 +274,10 @@ index 84b1b4b..6cc63d2 100644
  /*!
      \since 4.6
 */
-diff --git src/qt/src/network/access/qnetworkaccessmanager.h src/qt/src/network/access/qnetworkaccessmanager.h
+diff --git a/src/qt/src/network/access/qnetworkaccessmanager.h b/src/qt/src/network/access/qnetworkaccessmanager.h
 index 26a28e1..52b8452 100644
---- src/qt/src/network/access/qnetworkaccessmanager.h
-+++ src/qt/src/network/access/qnetworkaccessmanager.h
+--- a/src/qt/src/network/access/qnetworkaccessmanager.h
++++ b/src/qt/src/network/access/qnetworkaccessmanager.h
 @@ -84,6 +84,7 @@ public:
          PutOperation,
          PostOperation,
@@ -296,10 +296,10 @@ index 26a28e1..52b8452 100644
      QNetworkReply *deleteResource(const QNetworkRequest &request);
      QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = 0);
 
-diff --git src/webpage.cpp src/webpage.cpp
+diff --git a/src/webpage.cpp b/src/webpage.cpp
 index c76a4b8..a56b46a 100644
---- src/webpage.cpp
-+++ src/webpage.cpp
+--- a/src/webpage.cpp
++++ b/src/webpage.cpp
 @@ -817,6 +817,8 @@ void WebPage::openUrl(const QString &address, const QVariant &op, const QVariant
          networkOp = QNetworkAccessManager::PutOperation;
      else if (operation == "post")
