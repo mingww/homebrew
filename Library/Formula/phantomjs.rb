@@ -148,7 +148,6 @@ index dea23f9..984133d 100644
  /*!
      Sends a header request for \a path to the server set by setHost()
      or as specified in the constructor.
-*/
 diff --git a/src/qt/src/network/access/qhttp.h b/src/qt/src/network/access/qhttp.h
 index 9700e6e..1590806 100644
 --- src/qt/src/network/access/qhttp.h
