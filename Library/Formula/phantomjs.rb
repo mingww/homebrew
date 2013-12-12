@@ -299,7 +299,7 @@ diff --git a/src/webpage.cpp b/src/webpage.cpp
 index c76a4b8..a56b46a 100644
 --- a/src/webpage.cpp
 +++ b/src/webpage.cpp
-@@ -817,6 +817,8 @@ void WebPage::openUrl(const QString &address, const QVariant &op, const QVariant &settings)
+@@ -817,6 +817,8 @@ void WebPage::openUrl(const QString &address, const QVariant &op, const QVariantMap &settings)
          networkOp = QNetworkAccessManager::PutOperation;
      else if (operation == "post")
          networkOp = QNetworkAccessManager::PostOperation;
