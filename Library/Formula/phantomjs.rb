@@ -247,7 +247,7 @@ index 84b1b4b..6cc63d2 100644
 + files through HTML forms, use the POST mechanism.
 +
 + \sa get(), post(), deleteResource(), sendCustomRequest()
-+ /
++ */
 +QNetworkReply *QNetworkAccessManager::patch(const QNetworkRequest &request, QIODevice *data)
 +{
 +    return d_func()->postProcess(createRequest(QNetworkAccessManager::PatchOperation, request, data));
@@ -273,7 +273,7 @@ index 84b1b4b..6cc63d2 100644
 +
  /*!
      \since 4.6
-*/
+ */
 diff --git a/src/qt/src/network/access/qnetworkaccessmanager.h b/src/qt/src/network/access/qnetworkaccessmanager.h
 index 26a28e1..52b8452 100644
 --- a/src/qt/src/network/access/qnetworkaccessmanager.h
