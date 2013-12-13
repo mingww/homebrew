@@ -4,8 +4,8 @@ class Phantomjs < Formula
   homepage 'http://www.phantomjs.org/'
   #url 'https://phantomjs.googlecode.com/files/phantomjs-1.9.2-source.zip'
   #sha1 '08559acdbbe04e963632bc35e94c1a9a082b6da1'
-  url 'https://drive.google.com/file/d/0B4GdhJomXJi_X1Y3NWxobE5YaVk/edit?usp=sharing'
-  sha1 '2f850318a91148983dffa6da2d34465f340bb5d8'
+  url 'https://www.dropbox.com/s/kro7d5nt9btpl01/phantomjs-1.9.2-PATCH-source.zip'
+  sha1 'f2a88dc98bae19c486d737cffd477ef51a597897'
 
   def patches
     DATA
