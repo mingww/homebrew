@@ -1,7 +1,7 @@
 require 'formula'
 
 class Phantomjs < Formula
-  homepage 'http://www.phantomjs.org/'
+  #homepage 'http://www.phantomjs.org/'
   #url 'https://phantomjs.googlecode.com/files/phantomjs-1.9.2-source.zip'
   #sha1 '08559acdbbe04e963632bc35e94c1a9a082b6da1'
   url 'https://www.dropbox.com/s/kro7d5nt9btpl01/phantomjs-1.9.2-PATCH-source.zip'
