@@ -1,10 +1,10 @@
 require 'formula'
 
 class Phantomjs < Formula
-  #homepage 'http://www.phantomjs.org/'
+  homepage 'http://www.dropbox.com/'
   #url 'https://phantomjs.googlecode.com/files/phantomjs-1.9.2-source.zip'
   #sha1 '08559acdbbe04e963632bc35e94c1a9a082b6da1'
-  url 'https://www.dropbox.com/s/mrwz0j60yvh3u3j/phantomjs-1.9.2.zip'
+  url 'https://github.com/mingww/phantomjs/blob/PATCH/phantomjs-1.9.2.zip'
   sha1 'af5d467a27996e3a76afe58901c5abac260fbfb9'
 
   def patches
